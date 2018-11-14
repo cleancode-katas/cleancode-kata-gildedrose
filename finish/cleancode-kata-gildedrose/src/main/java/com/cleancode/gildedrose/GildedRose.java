@@ -1,67 +1,8 @@
 package com.cleancode.gildedrose;
 
 public class GildedRose {
-    Item[] items;
-
-    public GildedRose(Item[] items) {
-        this.items = items;
-    }
-
-    public void updateQuality() {
-        for (int i = 0; i < items.length; i++) {
-            if (!items[i].name.equals("Aged Brie")
-                    && !items[i].name.equals("Backstage passes to a TAFKAL80ETC concert")) {
-                if (items[i].quality > 0) {
-                    if (!items[i].name.equals("Sulfuras, Hand of Ragnaros")) {
-                        items[i].quality = items[i].quality - 1;
-                    }
-                }
-            } else {
-                if (items[i].quality < 50) {
-                    items[i].quality = items[i].quality + 1;
-
-                    if (items[i].name.equals("Backstage passes to a TAFKAL80ETC concert")) {
-                        if (items[i].sellIn < 11) {
-                            if (items[i].quality < 50) {
-                                items[i].quality = items[i].quality + 1;
-                            }
-                        }
-
-                        if (items[i].sellIn < 6) {
-                            if (items[i].quality < 50) {
-                                items[i].quality = items[i].quality + 1;
-                            }
-                        }
-                    }
-                }
-            }
-
-            if (!items[i].name.equals("Sulfuras, Hand of Ragnaros")) {
-                items[i].sellIn = items[i].sellIn - 1;
-            }
-
-            if (items[i].sellIn < 0) {
-                if (!items[i].name.equals("Aged Brie")) {
-                    if (!items[i].name.equals("Backstage passes to a TAFKAL80ETC concert")) {
-                        if (items[i].quality > 0) {
-                            if (!items[i].name.equals("Sulfuras, Hand of Ragnaros")) {
-                                items[i].quality = items[i].quality - 1;
-                            }
-                        }
-                    } else {
-                        items[i].quality = items[i].quality - items[i].quality;
-                    }
-                } else {
-                    if (items[i].quality < 50) {
-                        items[i].quality = items[i].quality + 1;
-                    }
-                }
-            }
-        }
-    }
-
     public static void main(String[] args) {
-		System.out.println("OMGHAI!");
+        System.out.println("OMGHAI!");
 
         Item[] items = new Item[] {
                 new Item("+5 Dexterity Vest", 10, 20), //
@@ -76,7 +17,7 @@ public class GildedRose {
                 //new Item("Conjured Mana Cake", 3, 6)
         };
 
-        GildedRose app = new GildedRose(items);
+        InventoryUpdator app = new InventoryUpdator(items);
 
         int days = 31;
         if (args.length > 0) {
@@ -90,7 +31,7 @@ public class GildedRose {
                 System.out.println(item);
             }
             System.out.println();
-            app.updateQuality();
+            app.update();
         }
-	}
+    }
 }
