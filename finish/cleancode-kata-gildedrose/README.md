@@ -119,3 +119,7 @@ Activity
 Activity 
 
 - Update AgedBrie class to keep only required logic
+
+Activity
+
+- Update BackstageStrategy class to keep only required logic
