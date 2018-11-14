@@ -59,3 +59,42 @@ Activity
 Activity
 
 - Invert if conditions from method adjustQualityForNegativeSellIn
+
+Observation
+
+- logic is based on the name of he item
+- different logic for different name
+- strategy for each name is different
+
+Activity
+
+- Add StrategyFactory for different names
+- Change method update in InventoryUpdator
+
+```java
+private void updateItem(Item item) {
+    UpdateStrategy updateStrategy = UpdateStrategyFactory.create(item.name);
+    updateStrategy.update(item);
+}
+```
+
+- Create the UpdateStrategyFactory class through IDE
+- create method
+
+```java
+public class UpdateStrategyFactory {
+    public static UpdateStrategy create(String name) {
+        return new UpdateStrategy();
+    }
+}
+```
+
+- Add line to UpdateStrategyFactory
+
+```java
+private static final Map<String, UpdateStrategy> strategyMap = createStrategyMap();
+```
+
+- Create the method to introduce multiple strategy classes
+- change logic to fetch strategy from map
+- if no strategy found use UpdateStrategy

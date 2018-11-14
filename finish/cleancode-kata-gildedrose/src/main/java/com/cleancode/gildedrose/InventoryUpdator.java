@@ -14,7 +14,8 @@ public class InventoryUpdator {
     }
 
     private void updateItem(Item item) {
-        new UpdateStrategy().update(item);
+        UpdateStrategy updateStrategy = UpdateStrategyFactory.create(item.name);
+        updateStrategy.update(item);
     }
 
 }
