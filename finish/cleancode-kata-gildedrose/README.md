@@ -107,3 +107,7 @@ Activity
 - Add NormalStrategy
 - Push members down from UpdateStrategy class
 - Keep update method abstract
+
+Activity
+
+- Update NormalStrategy to keep required logic only

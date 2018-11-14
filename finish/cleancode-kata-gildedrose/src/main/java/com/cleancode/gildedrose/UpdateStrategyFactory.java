@@ -9,7 +9,7 @@ public class UpdateStrategyFactory {
 
     private static Map<String, UpdateStrategy> createStrategyMap() {
         Map<String, UpdateStrategy> map = new HashMap<>();
-        map.put("Aged Vrie", new AgedBrieStrategy());
+        map.put("Aged Brie", new AgedBrieStrategy());
         map.put("Sulfuras, Hand of Ragnaros", new SulfurasStrategy());
         map.put("Backstage passes to a TAFKAL80ETC concert", new BackstageStrategy());
         return map;
