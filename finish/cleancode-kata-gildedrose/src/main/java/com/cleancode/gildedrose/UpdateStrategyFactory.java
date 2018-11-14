@@ -9,14 +9,16 @@ public class UpdateStrategyFactory {
 
     private static Map<String, UpdateStrategy> createStrategyMap() {
         Map<String, UpdateStrategy> map = new HashMap<>();
-        map.put("", new UpdateStrategy());
+        map.put("Aged Vrie", new AgedBrieStrategy());
+        map.put("Sulfuras, Hand of Ragnaros", new SulfurasStrategy());
+        map.put("Backstage passes to a TAFKAL80ETC concert", new BackstageStrategy());
         return map;
     }
 
     public static UpdateStrategy create(String name) {
         UpdateStrategy updateStrategy = strategyMap.get(name);
         if( null == updateStrategy) {
-            updateStrategy = new UpdateStrategy();
+            updateStrategy = new NormalStrategy();
         }
         return updateStrategy;
     }

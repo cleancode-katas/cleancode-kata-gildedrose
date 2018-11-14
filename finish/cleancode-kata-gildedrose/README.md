@@ -98,3 +98,12 @@ private static final Map<String, UpdateStrategy> strategyMap = createStrategyMap
 - Create the method to introduce multiple strategy classes
 - change logic to fetch strategy from map
 - if no strategy found use UpdateStrategy
+
+Activity
+
+- Add AgedBrieStrategy
+- Add SulfuralStrategy
+- Add BackstageStrategy
+- Add NormalStrategy
+- Push members down from UpdateStrategy class
+- Keep update method abstract
