@@ -55,3 +55,7 @@ Activity
 - Select first if and extract into method updateQualityIgnoringSellIn
 - Select second if and extract into method decrementSellIn
 - Select third if and extract into method adjustQualityForNegativeSellIn
+
+Activity
+
+- Invert if conditions from method adjustQualityForNegativeSellIn
