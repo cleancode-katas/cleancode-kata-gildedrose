@@ -111,3 +111,7 @@ Activity
 Activity
 
 - Update NormalStrategy to keep required logic only
+
+Activity
+
+- Update Sulfuras class to keep only required logic
