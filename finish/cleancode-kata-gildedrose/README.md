@@ -41,3 +41,17 @@ Activity
 - Refactor move UpdateStrategy class to top level
 - Pass the item object directly to update method of strategy class
 - remove the extra constructor and field from strategy class
+
+Observation
+
+- the update method in strategy class
+- logic is divided into three parts
+- change of quality ignoring sellIn date
+- decrement in sellIn days
+- adjustment of quality for sellIn days less than zero
+
+Activity
+
+- Select first if and extract into method updateQualityIgnoringSellIn
+- Select second if and extract into method decrementSellIn
+- Select third if and extract into method adjustQualityForNegativeSellIn
