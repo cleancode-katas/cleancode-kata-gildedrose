@@ -116,7 +116,7 @@ Activity
 
 - Update Sulfuras class to keep only required logic
 
-Activity 
+Activity
 
 - Update AgedBrie class to keep only required logic
 
