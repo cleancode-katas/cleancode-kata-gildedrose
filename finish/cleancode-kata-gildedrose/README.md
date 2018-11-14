@@ -25,3 +25,19 @@ Activity
 - Select items[i] and refactor to extract variable, all 34 occurences
 - Extract all code in for loop to method named updateItem
 - pass items[i] to the method and remove variable item
+
+Observation
+
+- The logic in updateItem
+- based on what name of the item is
+- based on ruled mainly on the item name
+- The logic is name based strategy
+
+Activity
+
+- Select all code from method updateItem
+- extract method object and name the class UpdateStrategy
+- Rename the invoke method to update
+- Refactor move UpdateStrategy class to top level
+- Pass the item object directly to update method of strategy class
+- remove the extra constructor and field from strategy class
