@@ -123,3 +123,10 @@ Activity
 Activity
 
 - Update BackstageStrategy class to keep only required logic
+
+Activity
+
+- Add ConjuredItem class to factory
+- Add ConjuredItem logic to map
+- Implement the ConjuredItem class starting from NormalStrategy
+- Create ConjuredTest class to test logic

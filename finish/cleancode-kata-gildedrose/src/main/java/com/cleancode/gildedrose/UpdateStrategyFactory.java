@@ -18,7 +18,12 @@ public class UpdateStrategyFactory {
     public static UpdateStrategy create(String name) {
         UpdateStrategy updateStrategy = strategyMap.get(name);
         if( null == updateStrategy) {
-            updateStrategy = new NormalStrategy();
+            if( name.startsWith("Conjured")) {
+                updateStrategy = new ConjuredStrategy();
+            }
+            else {
+                updateStrategy = new NormalStrategy();
+            }
         }
         return updateStrategy;
     }
